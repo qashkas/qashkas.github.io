@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#ffffff"/>
+    <meta name="description" content="It is simple PWA just for fun and building practique">
     
     <link rel="manifest" href="manifest.json">
     <meta name="format-detection" content="telephone=no">
@@ -23,11 +24,13 @@
     <link rel="apple-touch-icon" href="android-icon-192x192.png">
     <link rel="icon" href="android-icon-512x512.png">
     <link rel="apple-touch-icon" href="android-icon-512x512.png">
+
     <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/service-worker.js');
         }
     </script>
+
     <title>AshKas</title>
 
     <style>
@@ -45,28 +48,19 @@
     </style>
 </head>
 <body style="margin: 0; padding: 0;">
+    
     <header style="padding-left: 10px;">
-        <h3  style="color: #383838d8; font-size: 14px; font-family: Arial, Helvetica, sans-serif; font-weight: 600"><i class="arrow right"></i> Ashyq. Регистрация входа</h3>
+        <h3  style="color: #383838d8; font-size: 14px; font-family: Arial, Helvetica, sans-serif; font-weight: 600"><i class="arrow right"></i> ASHYQ. Статус по короновирусу</h3>
     </header>
-    <main style="padding-left: 10px; color: #ffffff; background-color: rgb(26, 196, 21);">
-        <h2 style="margin-bottom: 0; padding-top: 15px; color: #ffffffd8; font-size: 6vw; font-family: Arial, Helvetica, sans-serif; font-weight: bold;">Ваш статус</h2>
-        <h1 style="margin-top: 1px; margin-bottom: 1px; color: #ffffffad; font-size: 14vw; font-family: Arial, Helvetica, sans-serif; font-weight: bold;">Безопасный</h1>
-        <h2 style="margin-top: 0; padding-bottom: 20px; color: #ffffffd8; font-size: 6vw; font-family: Arial, Helvetica, sans-serif; font-weight: bold;">Не имеет ограничений</h2>
+
+    <main style="padding-left: 10px; color: #d6ffc5; background-color: rgb(26, 196, 21);">
+        <h1 style="margin-top: 5px; margin-bottom: 1px; padding-top: 10px; color: #ffffffad; font-size: 14vw; font-family: Arial, Helvetica, sans-serif; font-weight: bold;">Безопасный</h1>
+        <h2 style="margin-top: 0; margin-bottom: 5px; color: #d6ffc5; font-size: 5vw; font-family: Arial, Helvetica, sans-serif; font-weight: 400;">Не имеет ограничений</h2>
+        <h2 style="margin-top: 0; padding-bottom: 20px; color: #d6ffc5; font-size: 5vw; font-family: Arial, Helvetica, sans-serif; font-weight: 400;">ПЦР-тест отрицательный</h2>
     </main>
-    <section style="padding-left: 10px;">
-        <p style="margin-bottom: 0; color: #a7a7a7d8; font-family: Arial, Helvetica, sans-serif; font-weight:200">ФИО</p>
-        <h4 style="margin-top: 5px; color: #383838d8; font-family: Arial, Helvetica, sans-serif; font-weight: 600">Иванов Иван Иванович</h4>
-    </section>
+
     <section  style="padding-left: 10px;">
-        <p style="margin-bottom: 0; color: #a7a7a7d8; font-family: Arial, Helvetica, sans-serif; font-weight:200">ИИН</p>
-        <h4  style="margin-top: 5px; color: #383838d8; font-family: Arial, Helvetica, sans-serif; font-weight: 600">859256478125</h4>
-    </section>
-    <section  style="padding-left: 10px;">
-        <p style="margin-bottom: 0; color: #a7a7a7d8; font-family: Arial, Helvetica, sans-serif; font-weight:200">ИИН/БИН организации</p>
-        <h4  style="margin-top: 5px; color: #383838d8; font-family: Arial, Helvetica, sans-serif; font-weight: 600">14015651515548</h4>
-    </section>
-    <section  style="padding-left: 10px;">
-        <p style="margin-bottom: 10px; color: #a7a7a7d8; font-family: Arial, Helvetica, sans-serif; font-weight:200">Срок действия истечёт через</p>
+        <p style="margin-bottom: 10px; color: #909090; font-family: Arial, Helvetica, sans-serif; font-weight:200">Срок действия истечёт через</p>
         <span style="color: #383838d8; font-family: Arial, Helvetica, sans-serif; font-weight: 600" id="time" class="timer" >05:00</span>
         <script>
             function startTimer(duration, display) {
@@ -86,15 +80,27 @@
                     }, 1000);
                 }
 
-window.onload = function () {
-    var fiveMinutes = 60 * 5,
-        display = document.querySelector('#time');
-    startTimer(fiveMinutes, display);
-};
+                window.onload = function () {
+                var fiveMinutes = 60 * 5,
+                display = document.querySelector('#time');
+                startTimer(fiveMinutes, display);
+                };
         </script>
     </section>
-    <section  style="padding-left: 10px; padding-right: 10px;">
-        <button style="margin-top: 25px; padding-top: 15px; padding-bottom: 15px; text-transform: uppercase; width: 100%; border: 0; color: #ffffff; background-color: #002fff;">вернуться на главную kaspi.kz</button>
+
+    <section  style="padding-left: 10px;">
+        <p style="margin-bottom: 0; color: #919191; font-family: Arial, Helvetica, sans-serif; font-weight:200">ИИН</p>
+        <h4  style="margin-top: 5px; color: #383838d8; font-family: Arial, Helvetica, sans-serif; font-weight: 600">859256478125</h4>
     </section>
+
+    <section  style="padding-left: 10px;">
+        <p style="margin-bottom: 0; color: #919191; font-family: Arial, Helvetica, sans-serif; font-weight:200">ИИН/БИН организации</p>
+        <h4  style="margin-top: 5px; color: #383838d8; font-family: Arial, Helvetica, sans-serif; font-weight: 600">14015651515548</h4>
+    </section>
+    
+    <section style="padding-left: 10px; padding-right: 10px;">
+        <button name="just button" style="margin-top: 25px; padding-top: 15px; padding-bottom: 15px; text-transform: uppercase; width: 100%; border: 0; color: #ffffff; background-color: #2e55ff;">вернуться на главную kaspi.kz</button>
+    </section>
+
 </body>
 </html>
