@@ -63,29 +63,29 @@
 
     <section  style="padding-left: 10px;">
         <p style="margin-bottom: 10px; color: #909090; font-family: Arial, Helvetica, sans-serif; font-weight:400">Вы можете войти в течение</p>
-        <span style="color: #383838d8; font-family: Arial, Helvetica, sans-serif; font-weight: 600" id="time" class="timer" >05:00</span>
+        <span style="color: #383838d8; font-family: Arial, Helvetica, sans-serif; font-weight: 600">04:</span><span style="color: #383838d8; font-family: Arial, Helvetica, sans-serif; font-weight: 600" id="time" class="timer" >05:00</span>
         <script>
             function startTimer(duration, display) {
-                var timer = duration, minutes, seconds, dec;
+                var timer = duration, minutes, seconds;
                 setInterval(function () {
+                
                 minutes = parseInt(timer / 60, 10)
                 seconds = parseInt(timer % 60, 10);
-                dec = parseInt(timer / 6, 10);
 
+                
                 minutes = minutes < 10 ? "0" + minutes : minutes;
                 seconds = seconds < 10 ? "0" + seconds : seconds;
-                dec = dec < 10 ? "0" + dec : dec;
 
-                display.textContent = minutes + ":" + dec + "," + seconds;
+                display.textContent = minutes + ":" + seconds;
 
                     if (--timer < 0) {
                         timer = duration;
                         }
-                    }, 200);
+                    }, 20);
                 }
 
                 window.onload = function () {
-                var fiveMinutes = 60 * 5,
+                var fiveMinutes = 60 * 60,
                 display = document.querySelector('#time');
                 startTimer(fiveMinutes, display);
                 };
